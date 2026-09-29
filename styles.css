@@ -1,0 +1,22 @@
+html { scroll-behavior: smooth; }
+body { min-width: 320px; }
+.noise { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .025; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E"); }
+.orb { position: absolute; z-index: -1; border-radius: 999px; filter: blur(100px); opacity: .12; pointer-events: none; }
+.orb-one { top: 10rem; left: -10rem; width: 26rem; height: 26rem; background: #8b5cf6; }
+.orb-two { top: 35rem; right: -14rem; width: 30rem; height: 30rem; background: #34d399; }
+.gradient-text { background: linear-gradient(110deg,#86efac,#a78bfa); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.eyebrow { color: #86efac; font-family: ui-monospace,SFMono-Regular,Menlo,monospace; font-size: .7rem; letter-spacing: .2em; font-weight: 700; }
+.section-heading h2 { margin-top: 1.25rem; color: #fff; font-family: "Space Grotesk",sans-serif; font-size: clamp(2.25rem,5vw,4rem); line-height: 1.05; font-weight: 700; letter-spacing: -.04em; }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.pulse-dot { width: 6px; height: 6px; display: inline-block; border-radius: 50%; background: #86efac; box-shadow: 0 0 0 5px #86efac18; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 #86efac50; } 50% { box-shadow: 0 0 0 5px #86efac00; } }
+.code-card { transform: rotate(2deg); transition: transform .4s ease; }
+.code-card:hover { transform: rotate(0) translateY(-5px); }
+.float-card { animation: float 4s ease-in-out infinite; }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.skill-card,.project-card { transition: transform .3s ease, border-color .3s ease, background .3s ease; }
+.skill-card:hover,.project-card:hover { transform: translateY(-5px); border-color: #86efac55; background: #151a22; }
+.project-card.hidden-card { display: none; }
+.contact-panel { background: radial-gradient(circle at 90% 0%, #a78bfa18, transparent 35%), radial-gradient(circle at 0% 100%, #86efac0d, transparent 35%), #10131b; }
+@media (prefers-reduced-motion: reduce) { *,html { scroll-behavior: auto !important; animation: none !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }

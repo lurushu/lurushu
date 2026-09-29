@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Abdulkadir Yücel - Yazılım Mühendisi portfolyosu" />
+    <title>Abdulkadir Yücel | Yazılım Mühendisi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["DM Sans", "sans-serif"], display: ["Space Grotesk", "sans-serif"] },
+            colors: { ink: "#090b10", panel: "#10131b", line: "#242a38", mint: "#86efac", violet: "#a78bfa" }
+          }
+        }
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-ink text-slate-200 antialiased">
+    <div class="noise"></div>
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+
+    <header class="fixed top-0 z-50 w-full border-b border-white/5 bg-ink/75 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5" aria-label="Ana navigasyon">
+        <a href="#anasayfa" class="font-display text-lg font-bold tracking-tight text-white"><span class="text-mint">&lt;</span>deniz<span class="text-mint">/&gt;</span></a>
+        <div id="desktop-nav" class="hidden items-center gap-8 text-sm text-slate-400 md:flex"></div>
+        <a href="#iletisim" class="hidden rounded-full border border-mint/30 px-4 py-2 text-sm font-semibold text-mint transition hover:bg-mint hover:text-ink md:block">Birlikte çalışalım <span class="ml-1">↗</span></a>
+        <button id="menu-toggle" class="rounded-lg border border-line p-2 text-slate-300 md:hidden" aria-label="Menüyü aç" aria-expanded="false"><span class="text-xl">☰</span></button>
+      </nav>
+      <div id="mobile-nav" class="hidden border-t border-white/5 px-6 pb-5 pt-3 md:hidden"></div>
+    </header>
+
+    <main class="relative overflow-hidden">
+      <section id="anasayfa" class="mx-auto grid min-h-screen max-w-6xl items-center gap-16 px-6 pb-20 pt-36 lg:grid-cols-[1.1fr_.9fr]">
+        <div class="reveal">
+          <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-mint/20 bg-mint/5 px-3 py-1.5 text-xs font-semibold uppercase tracking-[.18em] text-mint"><span class="pulse-dot"></span> Yeni fırsatlara açığım</div>
+          <p class="mb-4 font-mono text-sm text-violet">Merhaba, ben</p>
+          <h1 class="max-w-3xl font-display text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-7xl">Fikirleri <span class="gradient-text">ürünlere</span>,<br />kodları etkiye dönüştürüyorum.</h1>
+          <p class="mt-7 max-w-xl text-lg leading-8 text-slate-400">Ölçeklenebilir backend sistemleri ve insan odaklı dijital deneyimler geliştiren bir yazılım mühendisiyim.</p>
+          <div class="mt-9 flex flex-wrap gap-4">
+            <a href="#projeler" class="rounded-full bg-mint px-6 py-3.5 text-sm font-bold text-ink transition hover:-translate-y-1 hover:bg-white">Çalışmalarımı gör <span class="ml-2">↓</span></a>
+            <a href="#iletisim" class="rounded-full border border-line px-6 py-3.5 text-sm font-bold text-slate-200 transition hover:-translate-y-1 hover:border-mint/60 hover:text-mint">İletişime geç <span class="ml-2">↗</span></a>
+          </div>
+          <div class="mt-14 flex items-center gap-5 text-sm text-slate-500">
+            <span>Bulunduğu yer</span><span class="h-px w-10 bg-line"></span><span class="text-slate-300">İstanbul, TR · UTC+3</span>
+          </div>
+        </div>
+        <div class="reveal relative mx-auto w-full max-w-md lg:ml-auto" style="transition-delay: 150ms">
+          <div class="code-card rounded-2xl border border-line bg-panel/90 p-5 shadow-2xl shadow-violet/5">
+            <div class="mb-6 flex items-center gap-2 border-b border-line pb-4"><span class="h-2.5 w-2.5 rounded-full bg-rose-400/80"></span><span class="h-2.5 w-2.5 rounded-full bg-amber-300/80"></span><span class="h-2.5 w-2.5 rounded-full bg-mint/80"></span><span class="ml-3 font-mono text-xs text-slate-600">developer.java</span></div>
+            <pre class="font-mono text-xs leading-7 text-slate-400 sm:text-sm"><span class="text-violet">public class</span> <span class="text-mint">Developer</span> {
+  <span class="text-violet">private final</span> String focus =
+    <span class="text-amber-300">"building the future"</span>;
+
+  <span class="text-violet">public</span> <span class="text-mint">Impact</span> create() {
+    <span class="text-violet">return</span> Impact.builder()
+      .craft(<span class="text-amber-300">"clean code"</span>)
+      .learn(<span class="text-amber-300">"every day"</span>)
+      .ship(<span class="text-amber-300">"with care"</span>)
+      .build();
+  }
+}</pre>
+          </div>
+          <div class="float-card absolute -bottom-7 -left-5 rounded-xl border border-line bg-panel px-4 py-3 shadow-xl sm:-left-10"><p class="text-[10px] uppercase tracking-widest text-slate-500">Şu an öğreniyor</p><p class="mt-1 text-sm font-semibold text-white">System Design <span class="text-mint">↗</span></p></div>
+        </div>
+      </section>
+
+      <section id="hakkimda" class="mx-auto max-w-6xl scroll-mt-24 px-6 py-28">
+        <div class="section-heading reveal"><p class="eyebrow">01 / HAKKIMDA</p><h2>Merakla başlayan,<br /><span class="text-slate-500">özenle büyüyen bir yolculuk.</span></h2></div>
+        <div class="mt-14 grid gap-10 lg:grid-cols-[.9fr_1.1fr]">
+          <div class="reveal">
+            <div class="relative overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-violet/20 via-panel to-mint/10 p-8">
+              <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full border border-violet/20"></div><div class="absolute -right-2 top-2 h-24 w-24 rounded-full border border-violet/20"></div>
+              <div class="relative flex h-56 flex-col justify-end"><span class="font-display text-7xl font-bold text-white/10">DK</span><p class="font-mono text-xs text-mint">const mindset = "always curious";</p></div>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay: 100ms">
+            <p class="text-lg leading-8 text-slate-300">İyi yazılımın yalnızca çalışan değil, <span class="text-white">anlaşılır, sürdürülebilir ve değer üreten</span> yazılım olduğuna inanıyorum.</p>
+            <p class="mt-5 leading-7 text-slate-400">Son 4 yıldır Java ve Spring ekosistemiyle güvenilir backend servisleri tasarlıyor; veriyi, otomasyonu ve yaratıcı fikirleri bir araya getiriyorum. Karmaşık problemleri sade çözümlere dönüştürmek, benim için işin en keyifli kısmı.</p>
+            <div id="stats" class="mt-10 grid grid-cols-3 gap-4"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="teknolojiler" class="border-y border-line/70 bg-panel/35">
+        <div class="mx-auto max-w-6xl scroll-mt-24 px-6 py-28">
+          <div class="section-heading reveal"><p class="eyebrow">02 / TEKNOLOJİ YIĞINIM</p><h2>Doğru araç, <span class="text-slate-500">doğru sonuç.</span></h2></div>
+          <div id="skills" class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+        </div>
+      </section>
+
+      <section id="projeler" class="mx-auto max-w-6xl scroll-mt-24 px-6 py-28">
+        <div class="section-heading reveal"><p class="eyebrow">03 / PROJELERİM</p><h2>Merak ettiklerim,<br /><span class="text-slate-500">inşa ettiklerim.</span></h2></div>
+        <div id="filters" class="reveal mt-12 flex flex-wrap gap-2"></div>
+        <div id="projects" class="mt-8 grid gap-5 md:grid-cols-2"></div>
+      </section>
+
+      <section id="egitim" class="border-y border-line/70 bg-panel/35">
+        <div class="mx-auto max-w-6xl scroll-mt-24 px-6 py-28">
+          <div class="section-heading reveal"><p class="eyebrow">04 / EĞİTİM</p><h2>Temeller sağlam,<br /><span class="text-slate-500">öğrenme devam ediyor.</span></h2></div>
+          <div id="education" class="mt-14"></div>
+        </div>
+      </section>
+
+      <section id="iletisim" class="mx-auto max-w-6xl scroll-mt-24 px-6 py-28">
+        <div class="contact-panel reveal rounded-3xl border border-line p-8 sm:p-14">
+          <p class="eyebrow">05 / İLETİŞİM</p><h2 class="mt-5 max-w-2xl font-display text-4xl font-bold tracking-tight text-white sm:text-6xl">Bir fikrin mi var?<br /><span class="gradient-text">Konuşalım.</span></h2>
+          <p class="mt-6 max-w-lg leading-7 text-slate-400">Yeni bir proje, freelance iş veya sadece teknoloji üzerine sohbet etmek için bana ulaşabilirsin.</p>
+          <a id="email-link" class="mt-9 inline-flex items-center gap-3 text-lg font-semibold text-white transition hover:text-mint" href="#"><span id="email-text"></span><span class="text-mint">↗</span></a>
+          <div id="socials" class="mt-16 flex flex-wrap gap-5 border-t border-line pt-6"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-line/70 px-6 py-8"><div class="mx-auto flex max-w-6xl flex-col justify-between gap-4 text-xs text-slate-500 sm:flex-row"><span>© <span id="year"></span> Deniz Kaya. Tasarım ve kod sevgiyle.</span><span>Java ile güçlendirildi <span class="text-mint">♥</span></span></div></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
